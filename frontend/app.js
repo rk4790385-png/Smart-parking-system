@@ -1,4 +1,6 @@
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://localhost:8080/api' 
+    : 'https://smart-parking-api.onrender.com/api'; // Replace with actual backend URL later
 
 // --- View Router Elements ---
 const authView = document.getElementById('authView');
